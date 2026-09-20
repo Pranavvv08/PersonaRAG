@@ -1,0 +1,230 @@
+{
+  "hero": {
+    "name": "Pranav Sasank Palivela",
+    "taglines": [
+      "AI/ML Engineer building end-to-end LLM-powered applications",
+      "Full-Stack AI Engineer | LLMs | RAG | Multi-Agent Systems",
+      "I build production-ready AI systems from RAG pipelines to full-stack apps"
+    ],
+    "intro": "B.Tech Computer Science (AI & ML) graduate specializing in building end-to-end AI applications powered by Large Language Models, Generative AI, Retrieval-Augmented Generation (RAG), and multi-agent systems. Currently exploring Full-Stack AI Engineer, AI Application Engineer, and LLM Engineer roles.",
+    "cta": [
+      {
+        "text": "View Projects",
+        "link": "#projects"
+      },
+      {
+        "text": "Download Resume",
+        "link": "#resume"
+      },
+      {
+        "text": "Contact Me",
+        "link": "#contact"
+      }
+    ]
+  },
+  "about": {
+    "description": "Hi, I'm Pranav, an AI/ML Engineer and B.Tech Computer Science (Artificial Intelligence and Machine Learning) graduate based in Hyderabad, India. I specialize in building end-to-end AI applications powered by Large Language Models, Generative AI, Retrieval-Augmented Generation (RAG), and multi-agent systems.\n\nMy core toolkit includes Python, LangChain, LangGraph, and PyTorch, backed by full-stack expertise in the MERN/PERN stack - which lets me take an AI idea from a working model all the way to a deployed, production-ready application. My foundation in machine learning, deep learning, and NLP has been reinforced through certifications from Stanford University and DeepLearning.AI.\nI'm passionate about developing intelligent, production-ready AI solutions and am actively looking for opportunities as a Full-Stack AI Engineer, AI Application Engineer, LLM Engineer, or Generative AI Engineer.",
+    "quickFacts": [
+      "🎓 B.Tech CSE (AI & ML), CMR Institute of Technology - CGPA 8.54",
+      "📍 Based in Hyderabad, Telangana, India",
+      "🔭 Currently building full-stack, production-ready AI systems",
+      "🌱 Certified in ML/DL fundamentals by Stanford & DeepLearning.AI",
+      "💬 Ask me about RAG pipelines, LangChain/LangGraph, or multi-agent architectures"
+    ]
+  },
+  "skills": {
+    "Programming Languages": [
+      "Python",
+      "C",
+      "C++"
+    ],
+    "AI & Machine Learning": [
+      "PyTorch",
+      "LangChain",
+      "LangGraph",
+      "NumPy",
+      "Pandas",
+      "Scikit-learn"
+    ],
+    "AI / LLM Concepts": [
+      "Retrieval-Augmented Generation (RAG)",
+      "Multi-Agent Systems",
+      "Vector Embeddings",
+      "Prompt Engineering"
+    ],
+    "Tools & Frameworks": [
+      "FastAPI",
+      "ChromaDB",
+      "Git",
+      "REST APIs"
+    ],
+    "Web Development": [
+      "PERN Stack",
+      "Redux",
+      "Zustand",
+      "HTML5",
+      "Tailwind CSS",
+      "JavaScript (ES6+)",
+      "REST APIs",
+      "PostgreSQL"
+    ]
+  },
+  "projects": [
+    {
+      "title": "AI Personal Agent Workspace",
+      "stack": [
+        "Python",
+        "FastAPI",
+        "Next.js 16",
+        "React 19",
+        "ChromaDB",
+        "OpenAI API"
+      ],
+      "description": "Architected a full-stack, production-ready multi-agent AI productivity platform that unifies a conversational chat agent, task management, Gmail-based email intelligence, and RAG-powered code and document search behind a single JWT-authenticated interface with per-user data isolation and a custom glassmorphism UI.",
+      "bullets": [
+        "Engineered a dual RAG pipeline using OpenAI's text-embedding-3-small and ChromaDB with two independent vector stores: one for GitHub repository intelligence (clones any public repo, chunks and embeds source files, and answers natural-language questions grounded in the codebase) and one for personal document Q&A supporting PDF and Markdown uploads.",
+        "Built an autonomous chat agent that parses every response as structured JSON to extract and save actionable tasks automatically, maintaining a rolling 5-message context window for coherent multi-turn conversations.",
+        "Integrated Gmail via IMAP SSL to fetch unread emails and used GPT to classify and convert them into priority-tagged tasks, distinguishing meeting invites and action items from routine newsletters.",
+        "Optimized API cost and latency through an in-memory query cache, fixed-size chunking strategy, and stateless JWT + bcrypt authentication with OAuth2PasswordBearer-compatible flow."
+      ],
+      "link": "https://github.com/Pranavvv08/AIWorkspace"
+    },
+    {
+      "title": "Bigram Language Model",
+      "stack": [
+        "Python",
+        "PyTorch"
+      ],
+      "description": "Built a character-level bigram language model from scratch using PyTorch to generate unique, plausible-sounding names, implementing the full neural network pipeline manually to demonstrate a hands-on grasp of probabilistic sequence modeling rather than relying on pre-trained components or high-level libraries.",
+      "bullets": [
+        "Implemented the complete training loop — one-hot character encoding, a single linear layer, softmax output, and negative log-likelihood loss with L2 regularization — trained via vanilla gradient descent over 1000 epochs.",
+        "Built a CLI supporting both training and inference modes, with model weights and character-to-index mappings persisted for reuse.",
+        "Achieved reproducible generation through seeded sampling, producing realistic new names from a learned character-transition distribution."
+      ],
+      "link": "https://github.com/Pranavvv08/TextGenerator"
+    },
+    {
+      "title": "Hand Gesture Volume Control",
+      "stack": [
+        "Python",
+        "OpenCV",
+        "MediaPipe"
+      ],
+      "description": "Developed a real-time computer vision application that controls system audio volume using hand gestures, combining MediaPipe's hand landmark detection with OpenCV video processing and PyCaw for direct system-level audio control, enabling fully touchless volume adjustment.",
+      "bullets": [
+        "Built a reusable HandDetector module on top of MediaPipe to identify and track hand landmarks in real time and render them on the live video feed.",
+        "Mapped the Euclidean distance between the thumb and index finger to the system volume range via interpolation, enabling smooth, low-latency gesture-driven control.",
+        "Displayed real-time FPS and volume level overlays on the video stream for immediate visual feedback."
+      ],
+      "link": "https://github.com/Pranavvv08/GestureVolumeControl"
+    }
+  ],
+  "education": [
+    {
+      "institution": "CMR Institute of Technology",
+      "degree": "Bachelor of Technology - Computer Science (Artificial Intelligence and Machine Learning)",
+      "period": "Nov 2022 – Jul 2026",
+      "score": "CGPA: 8.54"
+    },
+    {
+      "institution": "Narayana Group of Institutions",
+      "degree": "Intermediate Education (MPC)",
+      "period": "Mar 2019 – May 2022",
+      "score": "Score: 97.4%"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "The Web Developer Bootcamp 2026 – MERN Stack",
+      "issuer": "Udemy",
+      "date": "Jul 2026",
+      "link": "https://www.udemy.com/certificate/UC-7de3c3d2-f72a-45b4-81bf-c2307afe21e4/"
+    },
+    {
+      "title": "Retrieval Augmented Generation (RAG) with LangChain",
+      "issuer": "DataCamp",
+      "date": "Mar 2026",
+      "link": "https://www.datacamp.com/completed/statement-of-accomplishment/course/ef7a267023b6c2d34fc55af3c60749cf7ce3c19c"
+    },
+    {
+      "title": "Foundation: Introduction to LangChain – Python",
+      "issuer": "LangChain Academy",
+      "date": "Feb 2026",
+      "link": "https://academy.langchain.com/certificates/fnxszkrl7s"
+    },
+    {
+      "title": "AI Agents Fundamentals",
+      "issuer": "Hugging Face",
+      "date": "Mar 2025",
+      "link": "https://us.aws.cdn.hf.co/xet-bridge-us/67a47037749ea2c4b9fafd4b/393a73713a2f984a52ad706dd7092c3043c8dcc764797c1f47bebb258753c0fc?user_id=674b4efe9820aac918ad04f7&response-content-type=image%2Fpng&response-content-disposition=inline%3B+filename*%3DUTF-8%27%272025-03-01.png%3B+filename%3D%222025-03-01.png%22%3B&X-Xet-Cas-Uid=674b4efe9820aac918ad04f7&Expires=1787138638&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly91cy5hd3MuY2RuLmhmLmNvL3hldC1icmlkZ2UtdXMvNjdhNDcwMzc3NDllYTJjNGI5ZmFmZDRiLzM5M2E3MzcxM2EyZjk4NGE1MmFkNzA2ZGQ3MDkyYzMwNDNjOGRjYzc2NDc5N2MxZjQ3YmViYjI1ODc1M2MwZmNcXD91c2VyX2lkPTY3NGI0ZWZlOTgyMGFhYzkxOGFkMDRmNyZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcmcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj1pbmxpbmUlM0IrZmlsZW5hbWUlMkElM0RVVEYtOCUyNyUyNzIwMjUtMDMtMDEucG5nJTNCK2ZpbGVuYW1lJTNEJTIyMjAyNS0wMy0wMS5wbmclMjIlM0ImWC1YZXQtQ2FzLVVpZD02NzRiNGVmZTk4MjBhYWM5MThhZDA0ZjciLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkVwb2NoVGltZSI6MTc4NzEzODYzOH19fV19&Signature=MEUCIBttt%7EKDpUjoVLzRYAxO%7EAPJRLyelqZvg4nH7PK-uUwUAiEAuDriraXJgjLNAfhJ%7EZCdx9YYy3AUmUD7u3DOX19ZpDA_&Key-Pair-Id=01KXEF4KZ1B6FV465MAWR4M21F"
+    },
+    {
+      "title": "Advanced Learning Algorithms",
+      "issuer": "DeepLearning.AI, Stanford University",
+      "date": "Nov 2024",
+      "link": "https://www.coursera.org/account/accomplishments/verify/BZ2Y5LTWVEZ4"
+    },
+    {
+      "title": "Supervised Machine Learning: Regression and Classification",
+      "issuer": "DeepLearning.AI, Stanford University",
+      "date": "Sep 2024",
+      "link": "https://www.coursera.org/account/accomplishments/verify/S3RJWAE79OY2"
+    }
+  ],
+  "contact": {
+    "message": "I'm currently open to Full-Stack AI Engineer, AI Application Engineer, LLM Engineer, and Generative AI Engineer roles - feel free to reach out.",
+    "email": "palivelapranavsasank08@gmail.com",
+    "phone": "+91 7893388356",
+    "location": "Hyderabad, Telangana, India",
+    "linkedin": "https://www.linkedin.com/in/pranavsasank/",
+    "github": "https://www.github.com/Pranavvv08",
+    "footerTagline": "Not Vibecoded [Not Completely😛]."
+  },
+  "courses": [
+    {
+      "title": "The Web Developer Bootcamp (PERN Stack)",
+      "Instructor": "Colt Steele",
+      "Takeaway": "This is where I built my core engineering instincts. The course covers the full PERN stack end to end: HTML/CSS and JavaScript fundamentals, DOM manipulation, server-side development with Node.js and Express, RESTful API design, relational data modeling with PostgreSQL, authentication (sessions, JWT, password hashing with bcrypt), and deploying a working app to production. I built multiple CRUD applications from scratch - user auth flows, database-backed apps, and a capstone project wiring a React frontend to an Express/PostgreSQL backend. This foundation matters more than it might seem for AI work: an LLM-powered product is still, underneath, a full-stack application - APIs, databases, auth, and a frontend - with a model in the loop."
+    },
+    {
+      "title": "React",
+      "Instructor": "HuXn",
+      "Takeaway": "A focused, practical pass through modern React: components and JSX, hooks (useState, useEffect, and writing custom hooks), props vs. state, conditional rendering, list rendering, and client-side routing with React Router. This paired directly with the backend skills from the PERN bootcamp and gave me the frontend fluency I later used to build the Next.js interface for my AI Personal Agent Workspace project - the UI layer for chat interfaces, agent dashboards, and tool-triggered views that AI applications need."
+    },
+    {
+      "title": "Machine Learning Specialization",
+      "Instructor": "Andrew Ng, DeepLearning.AI (Stanford)",
+      "Takeaway": "The theoretical backbone of everything I've built since. This specialization covers supervised learning (linear and logistic regression, gradient descent, regularization to control overfitting), neural networks built up from a single neuron to multi-layer architectures, decision trees and ensemble methods, unsupervised learning (k-means clustering, anomaly detection, dimensionality reduction), and an introduction to recommender systems and reinforcement learning. What this course gave me isn't just \"which function to call\" - it's the underlying math and intuition for why a model learns what it learns, which makes debugging and reasoning about model behavior far less of a black box."
+    },
+    {
+      "title": "Neural Networks: Zero to Hero",
+      "Instructor": "Andrej Karpathy",
+      "Takeaway": "The course that took me from \"using\" neural networks to actually understanding what's happening inside them. I built micrograd, a tiny autograd engine from scratch in pure Python, to understand backpropagation at the level of individual scalar operations. Then makemore, progressing from a bigram character-level model through MLPs, batch normalization, and a WaveNet-style architecture. The capstone was building GPT from scratch (nanoGPT) - implementing self-attention and multi-head attention by hand and writing a full transformer block - plus a deep dive into the GPT-2 tokenizer and byte-pair encoding. This is what demystified the LLMs I now build applications on top of; I'm not just calling an API, I understand the mechanics underneath it."
+    },
+    {
+      "title": "PyTorch",
+      "Instructor": "Daniel Bourke, freeCodeCamp",
+      "Takeaway": "The practical, hands-on complement to the theory above - translating \"I understand how a neural network works\" into \"I can build and train one in a production-grade framework.\" Covers tensors and tensor operations, autograd in PyTorch specifically, the standard training workflow (data → model → loss/optimizer → training loop), computer vision projects using CNNs and transfer learning with torchvision, building custom Dataset/DataLoader pipelines, and considerations for saving and deploying trained models. This is the framework fluency layer that connects ML theory and from-scratch understanding to actually shipping models."
+    },
+    {
+      "title": "Introduction to LangChain",
+      "Instructor": "LangChain Academy",
+      "Takeaway": "Focused on the orchestration layer that sits between raw LLM API calls and a full production system: chains, prompt templates, structured output parsing, memory, and an introduction to LangGraph for building stateful, graph-based LLM workflows - nodes, edges, conditional routing, and cycles instead of linear chains. This is what makes it possible to move from \"single prompt, single response\" to multi-step, stateful LLM applications."
+    },
+    {
+      "title": "Retrieval Augmented Generation (RAG) with LangChain",
+      "Instructor": "DataCamp",
+      "Takeaway": "An end-to-end walkthrough of building RAG pipelines: document loading, chunking strategies, generating embeddings, storing and querying vector databases, designing retrievers, and combining retrieval with generation, along with an introduction to evaluating RAG output quality. I applied this directly in my AI Personal Agent Workspace project, where I used ChromaDB as the vector store to ground the agent's responses in retrieved context rather than relying purely on the model's parametric knowledge."
+    },
+    {
+      "title": "AI Agents Course",
+      "Instructor": "Hugging Face",
+      "Takeaway": "Covers what actually makes an LLM call an \"agent\": reasoning combined with tool use and memory, the ReAct pattern, function/tool calling, and building agents with frameworks like smolagents, LlamaIndex, and LangGraph. Also covers multi-agent systems and the basics of agent evaluation and observability. This is the most directly relevant course to the AI Application / LLM Engineer roles I'm targeting - the shift from building single-turn chatbots to building autonomous, tool-using systems that can take multi-step actions."
+    },
+    {
+      "title": "Rust",
+      "Instructor": "The Rust Book",
+      "Takeaway": "I went through the official Rust Book to build systems-level intuition that JavaScript and Python don't force you to develop. Core topics: ownership and borrowing, the borrow checker, lifetimes, structs/enums and pattern matching, error handling with Result/Option instead of exceptions, and traits and generics. Rust's compile-time guarantees around memory safety (without a garbage collector) changed how I think about state and mutation even when I'm writing Python. It's also increasingly relevant to AI infrastructure - tokenizers, inference servers, and performance-critical ML tooling (e.g. Hugging Face's tokenizers, candle) are written in Rust."
+    }
+  ]
+}

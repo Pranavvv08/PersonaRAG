@@ -1,0 +1,15 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "chromadb>=1.5.9",
+    "fastapi>=0.141.1",
+    "openai>=3.7.0",
+    "python-dotenv>=1.2.3",
+    "sentence-transformers>=6.0.1",
+    "upstash-redis>=1.8.0",
+    "uvicorn[standard]>=0.52.4",
+]
