@@ -1,5 +1,5 @@
 from dotenv import load_dotenv
-load_dotenv()
+load_dotenv(override=True)
 
 import os
 
@@ -31,7 +31,11 @@ class ChatResponse(BaseModel):
 
 @app.post("/chat", response_model=ChatResponse)
 def chat(req: ChatRequest, request: Request):
-    ip_address = request.client.host if request.client else "unknown"
+    ip_address = request.headers.get("x-forwarded-for")
+    if ip_address:
+        ip_address = ip_address.split(",")[0].strip()
+    else:
+        ip_address = request.client.host if request.client else "unknown"
     return ChatResponse(answer=answer_query(req.query, ip_address=ip_address))
 
 
