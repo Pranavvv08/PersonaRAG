@@ -37,7 +37,10 @@ def get_collection():
 def get_cache_collection():
     global _cache_collection
     if _cache_collection is None:
-        _cache_collection = _client.get_or_create_collection(CACHE_COLLECTION_NAME)
+        _cache_collection = _client.get_or_create_collection(
+            name=CACHE_COLLECTION_NAME,
+            metadata={"hnsw:space": "cosine"}
+        )
     return _cache_collection
 
 def generate_embedding(text: str) -> list[float]:
@@ -68,24 +71,28 @@ def save_to_semantic_cache(query: str, query_embedding: list[float], answer: str
 
 
 def infer_type(query: str) -> Optional[str]:
-    q = query.lower()
-    for type_, keywords in TYPE_KEYWORDS.items():
-        if any(kw in q for kw in keywords):
+    for type_, pattern in TYPE_KEYWORDS.items():
+        if pattern.search(query):
             return type_
     return None
 
 
 def is_list_query(query: str) -> bool:
-    q = query.lower()
-    return any(kw in q for kw in LIST_KEYWORDS)
+    return bool(LIST_KEYWORDS.search(query))
 
 
 def search(query: str, query_embedding: list[float], top_k: int = TOP_K):
     """Similarity-ranked search — best for 'tell me about X' style queries."""
     inferred = infer_type(query)
 
-
     where = {"type": inferred} if inferred else None
+    
+    # If it has a specific type but isn't explicitly a list query, check if the collection is small
+    if inferred and not is_list_query(query):
+        type_docs = get_collection().get(where=where, limit=11)
+        if type_docs["ids"] and len(type_docs["ids"]) <= 10:
+            top_k = len(type_docs["ids"])
+
     results = get_collection().query(
         query_embeddings=[query_embedding],
         n_results=top_k,
