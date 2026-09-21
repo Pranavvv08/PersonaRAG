@@ -3,7 +3,7 @@ import json
 import chromadb
 from sentence_transformers import SentenceTransformer
 
-from rag.config import CHROMA_DB_PATH, COLLECTION_NAME, DATA_PATH, EMBEDDING_MODEL
+from rag.config import CHROMA_DB_PATH, COLLECTION_NAME, CACHE_COLLECTION_NAME, DATA_PATH, EMBEDDING_MODEL
 
 
 def load_documents():
@@ -35,7 +35,12 @@ def build_index():
     client = chromadb.PersistentClient(path=str(CHROMA_DB_PATH))
     try:
         client.delete_collection(COLLECTION_NAME)
-    except ValueError:
+    except chromadb.errors.NotFoundError:
+        pass
+    
+    try:
+        client.delete_collection(CACHE_COLLECTION_NAME)
+    except chromadb.errors.NotFoundError:
         pass
     collection = client.create_collection(
         name=COLLECTION_NAME,
