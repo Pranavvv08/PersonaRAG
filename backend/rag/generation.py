@@ -144,4 +144,5 @@ def answer_query(query: str, history: Optional[list] = None, top_k: int = TOP_K,
         save_to_semantic_cache(standalone_query, query_embedding, answer)
         return answer
     except OpenAIError as e:
+        print(f"OpenAI Call Failed: {e}", flush=True)
         return "I'm currently experiencing technical difficulties connecting to my AI backend. Please try again later."
