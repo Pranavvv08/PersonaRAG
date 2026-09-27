@@ -42,8 +42,6 @@ htmlcov/
 .mypy_cache/
 
 # Vector Database & Local Embeddings / Storage
-chroma_db/
-backend/chroma_db/
 *.sqlite3
 *.db
 
