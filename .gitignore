@@ -41,9 +41,6 @@ htmlcov/
 .ruff_cache/
 .mypy_cache/
 
-# Vector Database & Local Embeddings / Storage
-*.sqlite3
-*.db
 
 # Node & Frontend
 node_modules/
