@@ -3,7 +3,10 @@ import re
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent  # backend/
-DATA_PATH = BASE_DIR / "data" / "documents.jsonl"
+DATA_PATH = BASE_DIR / "Data" / "documents.jsonl"
+if not DATA_PATH.exists():
+    DATA_PATH = BASE_DIR / "data" / "documents.jsonl"
+
 CHROMA_DB_PATH = BASE_DIR / "chroma_db"
 
 EMBEDDING_MODEL = "sentence-transformers/multi-qa-MiniLM-L6-cos-v1"
